@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://www.netbeans.org/ns/project/1">
+    <type>com.microchip.mplab.nbide.embedded.makeproject</type>
+    <configuration>
+        <data xmlns="http://www.netbeans.org/ns/make-project/1">
+            <name>TY1410_TX</name>
+            <name>TOYOTA_TX_V3</name>
+            <name>TOYOTA_TX_V2</name>
+            <name>TOYOTA_TX</name>
+            <name>LIN_CAN_IO_Test</name>
+            <name>China-RGB-PIC16F1936</name>
+            <name>TM1804-PIC16F1936</name>
+            <name>DEMO-5x5-PIC16F1936_TEST</name>
+            <name>DEMO-5x5-PIC16F1936</name>
+            <creation-uuid>88c5b285-446b-4fdb-921e-0293ff479ec3</creation-uuid>
+            <make-project-type>0</make-project-type>
+            <c-extensions>c</c-extensions>
+            <cpp-extensions/>
+            <header-extensions/>
+            <asminc-extensions/>
+            <sourceEncoding>UTF-8</sourceEncoding>
+            <make-dep-projects/>
+            <sourceRootList>
+                <sourceRootElem>.</sourceRootElem>
+                <sourceRootElem>../DEMO-PIC16F1503</sourceRootElem>
+            </sourceRootList>
+            <confList>
+                <confElem>
+                    <name>default</name>
+                    <type>2</type>
+                </confElem>
+            </confList>
+            <formatting>
+                <project-formatting-style>false</project-formatting-style>
+            </formatting>
+        </data>
+    </configuration>
+</project>

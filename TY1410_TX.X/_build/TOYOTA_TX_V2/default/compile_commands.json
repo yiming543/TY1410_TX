@@ -1,0 +1,8 @@
+[
+{
+  "directory": "D:/yiming/work/TY1410_TX.X/_build/TOYOTA_TX_V2/default",
+  "command": "c:\\PROGRA~1\\MICROC~1\\xc8\\v3.00\\bin\\xc8-cc.exe -DXPRJ_default=default -D__16F1936__ -D__DEBUG=1 -ID:\\yiming\\work\\TY1410_TX.X\\cmake\\TOYOTA_TX_V2\\default\\..\\..\\.. -c -mcpu=16F1936 -mdfp=C:/Users/t00904/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8 -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -mwarn=-3 -Wa,-a -msummary=-psect,-class,+mem,-hex,-file -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -moscval=0x3400 -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mdefault-config-bits -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto -o CMakeFiles\\TOYOTA_TX_V2_default_default_XC8_compile.dir\\D_\\yiming\\work\\TY1410_TX.X\\TY1410_TX.c.p1 -c D:\\yiming\\work\\TY1410_TX.X\\TY1410_TX.c",
+  "file": "D:\\yiming\\work\\TY1410_TX.X\\TY1410_TX.c",
+  "output": "CMakeFiles\\TOYOTA_TX_V2_default_default_XC8_compile.dir\\D_\\yiming\\work\\TY1410_TX.X\\TY1410_TX.c.p1"
+}
+]
