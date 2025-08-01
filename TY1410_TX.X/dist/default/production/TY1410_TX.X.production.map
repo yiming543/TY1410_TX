@@ -6,10 +6,10 @@ Linker command line:
   --edf=C:\Program Files\Microchip\xc8\v2.46\pic\dat\20240104201356_en.msgs \
   -cn -h+dist/default/production\TY1410_TX.X.production.sym \
   --cmf=dist/default/production\TY1410_TX.X.production.cmf -z -Q16F1936 \
-  -oC:\Users\t00904\AppData\Local\Temp\xcAsgog.\driver_tmp_3.o \
+  -oC:\Users\t00904\AppData\Local\Temp\xcBs3l8.1\driver_tmp_3.o \
   --defsym=__MPLAB_BUILD=1 --fixupoverflow=error \
   -Mdist/default/production/TY1410_TX.X.production.map \
-  --md=C:\Users\t00904\AppData\Local\Temp\xcAsgog.\driver_tmp_0.dat -E1 \
+  --md=C:\Users\t00904\AppData\Local\Temp\xcBs3l8.1\driver_tmp_0.dat -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh \
   -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 -AENTRY=00h-0FFhx32 \
   -ACOMMON=070h-07Fh -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh \
@@ -32,7 +32,7 @@ Linker command line:
   -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
   -DENTRY=2 -preset_vec=00h,intentry,sivt,init,end_init -ppowerup=CODE \
   -pcinit=CODE -pfunctab=ENTRY -k \
-  C:\Users\t00904\AppData\Local\Temp\xcAsgog.\driver_tmp_15.o \
+  C:\Users\t00904\AppData\Local\Temp\xcBs3l8.1\driver_tmp_15.o \
   dist/default/production\TY1410_TX.X.production.o 
 
 Object code version is 3.11
@@ -42,41 +42,41 @@ Machine type is 16F1936
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\t00904\AppData\Local\Temp\xcAsgog.\driver_tmp_15.o
+C:\Users\t00904\AppData\Local\Temp\xcBs3l8.1\driver_tmp_15.o
                 end_init                              2        2        2        0       0
                 reset_vec                             0        0        2        0       0
                 config                             8007     8007        2        0       4
 dist/default/production\TY1410_TX.X.production.o
                 cinit                               7DD      7DD       23      FBA       0
                 config                             8007     8007        2        0       4
-                text4                               70A      70A       49      E14       0
-                text3                               643      643       3F      C86       0
-                text2                               63C      63C        7      C78       0
+                text4                               703      703       50      E06       0
+                text3                               63C      63C       3F      C78       0
+                text2                               635      635        7      C6A       0
                 text1                               753      753       8A      EA6       0
-                maintext                            6C2      6C2       48      D84       0
+                maintext                            6BB      6BB       48      D76       0
                 cstackCOMMON                         70       70        E       70       1
-                clrtext                             630      630        6      C60       0
-                inittext                            636      636        6      C6C       0
+                clrtext                             629      629        6      C52       0
+                inittext                            62F      62F        6      C5E       0
                 dataBANK1                            A0       A0       40       A0       1
                 dataBANK0                            39       39        4       20       1
                 bssBANK0                             20       20       19       20       1
-                idataBANK1                          682      682       40      D04       0
-                idataBANK0                          62C      62C        4      C58       0
+                idataBANK1                          67B      67B       40      CF6       0
+                idataBANK0                          625      625        4      C4A       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   CODE           
                 end_init                              2        2        2         0
                 cinit                               7DD      7DD       23         0
                 reset_vec                             0        0        2         0
-                text4                               70A      70A       49         0
-                text3                               643      643       3F         0
-                text2                               63C      63C        7         0
+                text4                               703      703       50         0
+                text3                               63C      63C       3F         0
+                text2                               635      635        7         0
                 text1                               753      753       8A         0
-                maintext                            6C2      6C2       48         0
-                clrtext                             630      630        6         0
-                inittext                            636      636        6         0
-                idataBANK1                          682      682       40         0
-                idataBANK0                          62C      62C        4         0
+                maintext                            6BB      6BB       48         0
+                clrtext                             629      629        6         0
+                inittext                            62F      62F        6         0
+                idataBANK1                          67B      67B       40         0
+                idataBANK0                          625      625        4         0
 
         CLASS   STRCODE        
 
@@ -246,14 +246,14 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
                 bssBANK0                       000020  00001D  00003D        20       1  BANK0       1
                 cstackCOMMON                   000070  00000E  00007E        70       1  COMMON      1
                 dataBANK1                      0000A0  000040  0000E0        A0       1  BANK1       1
-                idataBANK0                     00062C  000004  000630       C58       0  CODE        2
-                clrtext                        000630  000006  000636       C60       0  CODE        2
-                inittext                       000636  000006  00063C       C6C       0  CODE        2
-                text2                          00063C  000007  000643       C78       0  CODE        2
-                text3                          000643  00003F  000682       C86       0  CODE        2
-                idataBANK1                     000682  000040  0006C2       D04       0  CODE        2
-                maintext                       0006C2  000048  00070A       D84       0  CODE        2
-                text4                          00070A  000049  000753       E14       0  CODE        2
+                idataBANK0                     000625  000004  000629       C4A       0  CODE        2
+                clrtext                        000629  000006  00062F       C52       0  CODE        2
+                inittext                       00062F  000006  000635       C5E       0  CODE        2
+                text2                          000635  000007  00063C       C6A       0  CODE        2
+                text3                          00063C  00003F  00067B       C78       0  CODE        2
+                idataBANK1                     00067B  000040  0006BB       CF6       0  CODE        2
+                maintext                       0006BB  000048  000703       D76       0  CODE        2
+                text4                          000703  000050  000753       E06       0  CODE        2
                 text1                          000753  00008A  0007DD       EA6       0  CODE        2
                 cinit                          0007DD  000023  000800       FBA       0  CODE        2
 
@@ -269,12 +269,12 @@ UNUSED ADDRESS RANGES
         BANK5            002A0-002EF              50           1
         BANK6            00320-0032F              10           1
         BIGRAM           02000-021EF             1F0           1
-        CODE             00004-0062B             628           2
+        CODE             00004-00624             621           2
                          00800-01FFF             800
-        CONST            00004-0062B             100           2
+        CONST            00004-00624             100           2
                          00800-01FFF             100
         EEDATA           0F000-0F0FF             100           2
-        ENTRY            00004-0062B             100           2
+        ENTRY            00004-00624             100           2
                          00800-01FFF             100
         IDLOC            08000-08003               4           2
         RAM              0003D-0006F              33           1
@@ -316,9 +316,9 @@ UNUSED ADDRESS RANGES
         SFR7             00380-003EF              70           1
         SFR8             00400-0046F              70           1
         SFR9             00480-004EF              70           1
-        STRCODE          00004-0062B             628           2
+        STRCODE          00004-00624             621           2
                          00800-01FFF            1800
-        STRING           00004-0062B             100           2
+        STRING           00004-00624             100           2
                          00800-01FFF             100
 
                                   Symbol Table
@@ -333,10 +333,10 @@ _CCP3CON                             (abs)        00313
 _CCP3SEL                             (abs)        008EE
 _CCPR3L                              (abs)        00311
 _CS                                  dataBANK1    000A0
-_Check_Input                         text4        0070A
+_Check_Input                         text4        00703
 _D2                                  bssBANK0     00038
 _D3                                  bssBANK0     00037
-_Hardware_Init                       text3        00643
+_Hardware_Init                       text3        0063C
 _LATA                                (abs)        0010C
 _LATB                                (abs)        0010D
 _LATC                                (abs)        0010E
@@ -571,32 +571,32 @@ ___stack_lo                          stack        00000
 ___stackhi                           (abs)        00000
 ___stacklo                           (abs)        00000
 __end_of_Check_Input                 text4        00753
-__end_of_Hardware_Init               text3        00682
+__end_of_Hardware_Init               text3        0067B
 __end_of_PWM                         text1        007DD
 __end_of__initialization             cinit        007FD
-__end_of_main                        maintext     0070A
-__end_of_wait_for_pwm_cycle_complete text2        00643
+__end_of_main                        maintext     00703
+__end_of_wait_for_pwm_cycle_complete text2        0063C
 __initialization                     cinit        007DD
 __pbssBANK0                          bssBANK0     00020
 __pcstackCOMMON                      cstackCOMMON 00070
 __pdataBANK0                         dataBANK0    00039
 __pdataBANK1                         dataBANK1    000A0
-__pidataBANK0                        idataBANK0   0062C
-__pidataBANK1                        idataBANK1   00682
-__pmaintext                          maintext     006C2
+__pidataBANK0                        idataBANK0   00625
+__pidataBANK1                        idataBANK1   0067B
+__pmaintext                          maintext     006BB
 __ptext1                             text1        00753
-__ptext2                             text2        0063C
-__ptext3                             text3        00643
-__ptext4                             text4        0070A
+__ptext2                             text2        00635
+__ptext3                             text3        0063C
+__ptext4                             text4        00703
 _csFlag                              bssBANK0     00036
 _fException                          bssBANK0     00035
-_main                                maintext     006C2
+_main                                maintext     006BB
 _tx_Data                             bssBANK0     00020
-_wait_for_pwm_cycle_complete         text2        0063C
+_wait_for_pwm_cycle_complete         text2        00635
 btemp                                (abs)        0007E
-clear_ram0                           clrtext      00630
+clear_ram0                           clrtext      00629
 end_of_initialization                cinit        007FD
-init_ram                             inittext     00636
+init_ram                             inittext     0062F
 intlevel0                            functab      00000
 intlevel1                            functab      00000
 intlevel2                            functab      00000
@@ -615,12 +615,12 @@ MODULE INFORMATION
 Module		Function		Class		Link	Load	Size
 TY1410_TX.c
 		_PWM           		CODE           	0753	0000	138
-		_Check_Input   		CODE           	070A	0000	73
-		_main          		CODE           	06C2	0000	72
-		_wait_for_pwm_cycle_complete		CODE           	063C	0000	7
-		_Hardware_Init 		CODE           	0643	0000	63
+		_Check_Input   		CODE           	0703	0000	80
+		_main          		CODE           	06BB	0000	72
+		_wait_for_pwm_cycle_complete		CODE           	0635	0000	7
+		_Hardware_Init 		CODE           	063C	0000	63
 
-TY1410_TX.c estimated size: 353
+TY1410_TX.c estimated size: 360
 
 shared
 		__initialization		CODE           	07DD	0000	32

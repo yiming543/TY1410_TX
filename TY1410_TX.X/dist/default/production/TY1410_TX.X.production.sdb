@@ -11,15 +11,15 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"331 D:\yiming\work\TY1410_TX.X\TY1410_TX.c
+"338 D:\yiming\work\TY1410_TX.X\TY1410_TX.c
 [v _wait_for_pwm_cycle_complete wait_for_pwm_cycle_complete `(v  1 e 1 0 ]
-"340
+"347
 [v _PWM PWM `(v  1 e 1 0 ]
-"369
+"376
 [v _Hardware_Init Hardware_Init `(v  1 e 1 0 ]
-"397
+"404
 [v _Check_Input Check_Input `(v  1 e 1 0 ]
-"492
+"517
 [v _main main `(i  1 e 2 0 ]
 "429 C:/Users/t00904/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1936.h
 [v _PORTA PORTA `VEuc  1 e 1 @12 ]
@@ -114,7 +114,7 @@
 `a 1 b6 1 0 :1:6 
 `a 1 b7 1 0 :1:7 
 ]
-"145 D:\yiming\work\TY1410_TX.X\TY1410_TX.c
+"151 D:\yiming\work\TY1410_TX.X\TY1410_TX.c
 [u S31 . 1 `S22 1 . 1 0 `uc 1 Byte 1 0 ]
 [v _D2 D2 `S31  1 e 1 0 ]
 [s S34 . 1 `a 1 b0 1 0 :1:0 
@@ -126,7 +126,7 @@
 `a 1 trunLight_R 1 0 :1:6 
 `a 1 b7 1 0 :1:7 
 ]
-"146
+"152
 [u S43 . 1 `S34 1 . 1 0 `uc 1 Byte 1 0 ]
 [v _D3 D3 `S43  1 e 1 0 ]
 [s S46 . 1 `a 1 turnLight_R 1 0 :1:0 
@@ -138,49 +138,49 @@
 `a 1 b6 1 0 :1:6 
 `a 1 b7 1 0 :1:7 
 ]
-"147
+"153
 [u S55 . 1 `S46 1 . 1 0 `uc 1 Byte 1 0 ]
 [v _csFlag csFlag `S55  1 e 1 0 ]
-"148
+"154
 [v _fException fException `a  1 e 1 0 ]
-"150
+"156
 [v _tx_Data tx_Data `[11]uc  1 e 11 0 ]
-"151
+"157
 [v _CS CS `[64]uc  1 s 64 CS ]
-"492
+"517
 [v _main main `(i  1 e 2 0 ]
 {
-"522
+"547
 [v main@i i `uc  1 a 1 13 ]
-"1190
+"1215
 } 0
-"340
+"347
 [v _PWM PWM `(v  1 e 1 0 ]
 {
 [v PWM@num num `uc  1 a 1 wreg ]
-"363
+"370
 [v PWM@i_198 i `uc  1 a 1 9 ]
-"353
+"360
 [v PWM@i i `uc  1 a 1 10 ]
-"341
+"348
 [v PWM@Dbit Dbit `[8]uc  1 a 8 1 ]
-"340
+"347
 [v PWM@num num `uc  1 a 1 wreg ]
 [v PWM@num num `uc  1 a 1 11 ]
-"367
+"374
 } 0
-"331
+"338
 [v _wait_for_pwm_cycle_complete wait_for_pwm_cycle_complete `(v  1 e 1 0 ]
 {
-"338
+"345
 } 0
-"369
+"376
 [v _Hardware_Init Hardware_Init `(v  1 e 1 0 ]
 {
-"395
+"402
 } 0
-"397
+"404
 [v _Check_Input Check_Input `(v  1 e 1 0 ]
 {
-"488
+"513
 } 0

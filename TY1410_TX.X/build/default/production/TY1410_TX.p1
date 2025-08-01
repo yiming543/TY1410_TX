@@ -1,26 +1,26 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"94 TY1410_TX.c
-[; ;TY1410_TX.c: 94:   struct {
+"100 TY1410_TX.c
+[; ;TY1410_TX.c: 100:   struct {
 [s S355 :1 `a 1 :1 `a 1 :1 `a 1 :1 `a 1 :1 `a 1 :1 `a 1 :1 `a 1 :1 `a 1 ]
 [n S355 . b0 b1 RunLight DRL LoBeam HiBeam b6 b7 ]
-"92
-[; ;TY1410_TX.c: 92: typedef union {
+"98
+[; ;TY1410_TX.c: 98: typedef union {
 [u S354 `S355 1 `uc 1 ]
 [n S354 . . Byte ]
-"109
-[; ;TY1410_TX.c: 109:   struct {
+"115
+[; ;TY1410_TX.c: 115:   struct {
 [s S357 :1 `a 1 :1 `a 1 :1 `a 1 :1 `a 1 :1 `a 1 :1 `a 1 :1 `a 1 :1 `a 1 ]
 [n S357 . b0 b1 b2 b3 b4 turnLight_L trunLight_R b7 ]
-"107
-[; ;TY1410_TX.c: 107: typedef union {
+"113
+[; ;TY1410_TX.c: 113: typedef union {
 [u S356 `S357 1 `uc 1 ]
 [n S356 . . Byte ]
-"124
-[; ;TY1410_TX.c: 124:   struct {
+"130
+[; ;TY1410_TX.c: 130:   struct {
 [s S359 :1 `a 1 :1 `a 1 :1 `a 1 :1 `a 1 :1 `a 1 :1 `a 1 :1 `a 1 :1 `a 1 ]
 [n S359 . turnLight_R turnLight_L HiBeam LoBeam DRL RunLight b6 b7 ]
-"122
-[; ;TY1410_TX.c: 122: typedef union {
+"128
+[; ;TY1410_TX.c: 128: typedef union {
 [u S358 `S359 1 `uc 1 ]
 [n S358 . . Byte ]
 "2249 C:/Users/t00904/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1936.h
@@ -628,63 +628,63 @@ Version 4.0 HI-TECH Software Intermediate Code
 "7099
 [; ;C:/Users/t00904/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1936.h: 7099: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"36 TY1410_TX.c
+"42 TY1410_TX.c
 [p x FCMEN  =  OFF ]
-"37
+"43
 [p x IESO  =  OFF ]
-"38
-[p x CLKOUTEN  =  OFF  ]
-"40
-[p x BOREN  =  ON  ]
-"41
-[p x CPD  =  ON ]
-"42
-[p x CP  =  ON  ]
 "44
-[p x MCLRE  =                                                             OFF  ]
+[p x CLKOUTEN  =  OFF  ]
 "46
-[p x PWRTE  =  OFF    ]
+[p x BOREN  =  ON  ]
 "47
-[p x WDTE  =  OFF     ]
+[p x CPD  =  ON ]
 "48
-[p x FOSC  =  INTOSC  ]
+[p x CP  =  ON  ]
+"50
+[p x MCLRE  =                                                             OFF  ]
 "52
-[p x LVP  =                                                               OFF  ]
+[p x PWRTE  =  OFF    ]
+"53
+[p x WDTE  =  OFF     ]
 "54
-[p x BORV  =  LO  ]
-"56
-[p x STVREN  =  ON  ]
+[p x FOSC  =  INTOSC  ]
 "58
-[p x PLLEN  =  ON  ]
-"59
-[p x VCAPEN  =  OFF ]
+[p x LVP  =                                                               OFF  ]
 "60
+[p x BORV  =  LO  ]
+"62
+[p x STVREN  =  ON  ]
+"64
+[p x PLLEN  =  ON  ]
+"65
+[p x VCAPEN  =  OFF ]
+"66
 [p x WRT  =                                                               OFF  ]
-"145
-[; ;TY1410_TX.c: 145: flag_D2 D2;
+"151
+[; ;TY1410_TX.c: 151: flag_D2 D2;
 [v _D2 `S354 ~T0 @X0 1 e ]
-"146
-[; ;TY1410_TX.c: 146: flag_D3 D3;
+"152
+[; ;TY1410_TX.c: 152: flag_D3 D3;
 [v _D3 `S356 ~T0 @X0 1 e ]
-"147
-[; ;TY1410_TX.c: 147: flag_CS_index csFlag;
+"153
+[; ;TY1410_TX.c: 153: flag_CS_index csFlag;
 [v _csFlag `S358 ~T0 @X0 1 e ]
-"148
-[; ;TY1410_TX.c: 148: _Bool fException = 0;
+"154
+[; ;TY1410_TX.c: 154: _Bool fException = 0;
 [v _fException `a ~T0 @X0 1 e ]
 [i _fException
 -> -> 0 `i `a
 ]
-"150
-[; ;TY1410_TX.c: 150: uint8_t tx_Data[11] = {0};
+"156
+[; ;TY1410_TX.c: 156: uint8_t tx_Data[11] = {0};
 [v _tx_Data `uc ~T0 @X0 -> 11 `i e ]
 [i _tx_Data
 :U ..
 -> -> 0 `i `uc
 ..
 ]
-"151
-[; ;TY1410_TX.c: 151: static uint8_t CS[64] = {
+"157
+[; ;TY1410_TX.c: 157: static uint8_t CS[64] = {
 [v _CS `uc ~T0 @X0 -> 64 `i s ]
 [i _CS
 :U ..
@@ -716,7 +716,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
--> -> 18 `i `uc
+-> -> 177 `i `uc
 -> -> 160 `i `uc
 -> -> 113 `i `uc
 -> -> 1 `i `uc
@@ -754,8 +754,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 162 `i `uc
 ..
 ]
-"325
-[; ;TY1410_TX.c: 325: unsigned char data48[4] = {2, 0, 0, 180};
+"332
+[; ;TY1410_TX.c: 332: unsigned char data48[4] = {2, 0, 0, 180};
 [v _data48 `uc ~T0 @X0 -> 4 `i e ]
 [i _data48
 :U ..
@@ -765,8 +765,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 180 `i `uc
 ..
 ]
-"326
-[; ;TY1410_TX.c: 326: unsigned char a = 0, b = 0;
+"333
+[; ;TY1410_TX.c: 333: unsigned char a = 0, b = 0;
 [v _a `uc ~T0 @X0 1 e ]
 [i _a
 -> -> 0 `i `uc
@@ -775,8 +775,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [i _b
 -> -> 0 `i `uc
 ]
-"329
-[; ;TY1410_TX.c: 329: void LED_OFF(void) { LATB = 0; }
+"336
+[; ;TY1410_TX.c: 336: void LED_OFF(void) { LATB = 0; }
 [v _LED_OFF `(v ~T0 @X0 1 ef ]
 {
 [e :U _LED_OFF ]
@@ -784,42 +784,42 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _LATB -> -> 0 `i `uc ]
 [e :UE 360 ]
 }
-"331
-[; ;TY1410_TX.c: 331: void wait_for_pwm_cycle_complete(void) {
+"338
+[; ;TY1410_TX.c: 338: void wait_for_pwm_cycle_complete(void) {
 [v _wait_for_pwm_cycle_complete `(v ~T0 @X0 1 ef ]
 {
 [e :U _wait_for_pwm_cycle_complete ]
 [f ]
-"332
-[; ;TY1410_TX.c: 332:   while (1) {
+"339
+[; ;TY1410_TX.c: 339:   while (1) {
 [e :U 363 ]
 {
-"333
-[; ;TY1410_TX.c: 333:     if (TMR2IF) {
+"340
+[; ;TY1410_TX.c: 340:     if (TMR2IF) {
 [e $ ! _TMR2IF 365  ]
 {
-"334
-[; ;TY1410_TX.c: 334:       TMR2IF = 0;
+"341
+[; ;TY1410_TX.c: 341:       TMR2IF = 0;
 [e = _TMR2IF -> -> 0 `i `b ]
-"335
-[; ;TY1410_TX.c: 335:       break;
+"342
+[; ;TY1410_TX.c: 342:       break;
 [e $U 364  ]
-"336
-[; ;TY1410_TX.c: 336:     }
+"343
+[; ;TY1410_TX.c: 343:     }
 }
 [e :U 365 ]
-"337
-[; ;TY1410_TX.c: 337:   }
+"344
+[; ;TY1410_TX.c: 344:   }
 }
 [e :U 362 ]
 [e $U 363  ]
 [e :U 364 ]
-"338
-[; ;TY1410_TX.c: 338: }
+"345
+[; ;TY1410_TX.c: 345: }
 [e :UE 361 ]
 }
-"340
-[; ;TY1410_TX.c: 340: void PWM(unsigned char num) {
+"347
+[; ;TY1410_TX.c: 347: void PWM(unsigned char num) {
 [v _PWM `(v ~T0 @X0 1 ef1`uc ]
 {
 [e :U _PWM ]
@@ -828,45 +828,45 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v F2775 `uc ~T0 @X0 -> 8 `i s ]
 [i F2775
 :U ..
-"341
-[; ;TY1410_TX.c: 341:   unsigned char Dbit[8] = {0};
+"348
+[; ;TY1410_TX.c: 348:   unsigned char Dbit[8] = {0};
 -> -> 0 `i `uc
 ..
 ]
 [v _Dbit `uc ~T0 @X0 -> 8 `i a ]
 [e = _Dbit F2775 ]
-"342
-[; ;TY1410_TX.c: 342:   Dbit[0] = (num >> 0) & 0x01;
-[e = *U + &U _Dbit * -> -> -> 0 `i `ui `ux -> -> # *U &U _Dbit `ui `ux -> & >> -> _num `i -> 0 `i -> 1 `i `uc ]
-"343
-[; ;TY1410_TX.c: 343:   Dbit[1] = (num >> 1) & 0x01;
-[e = *U + &U _Dbit * -> -> -> 1 `i `ui `ux -> -> # *U &U _Dbit `ui `ux -> & >> -> _num `i -> 1 `i -> 1 `i `uc ]
-"344
-[; ;TY1410_TX.c: 344:   Dbit[2] = (num >> 2) & 0x01;
-[e = *U + &U _Dbit * -> -> -> 2 `i `ui `ux -> -> # *U &U _Dbit `ui `ux -> & >> -> _num `i -> 2 `i -> 1 `i `uc ]
-"345
-[; ;TY1410_TX.c: 345:   Dbit[3] = (num >> 3) & 0x01;
-[e = *U + &U _Dbit * -> -> -> 3 `i `ui `ux -> -> # *U &U _Dbit `ui `ux -> & >> -> _num `i -> 3 `i -> 1 `i `uc ]
-"346
-[; ;TY1410_TX.c: 346:   Dbit[4] = (num >> 4) & 0x01;
-[e = *U + &U _Dbit * -> -> -> 4 `i `ui `ux -> -> # *U &U _Dbit `ui `ux -> & >> -> _num `i -> 4 `i -> 1 `i `uc ]
-"347
-[; ;TY1410_TX.c: 347:   Dbit[5] = (num >> 5) & 0x01;
-[e = *U + &U _Dbit * -> -> -> 5 `i `ui `ux -> -> # *U &U _Dbit `ui `ux -> & >> -> _num `i -> 5 `i -> 1 `i `uc ]
-"348
-[; ;TY1410_TX.c: 348:   Dbit[6] = (num >> 6) & 0x01;
-[e = *U + &U _Dbit * -> -> -> 6 `i `ui `ux -> -> # *U &U _Dbit `ui `ux -> & >> -> _num `i -> 6 `i -> 1 `i `uc ]
 "349
-[; ;TY1410_TX.c: 349:   Dbit[7] = (num >> 7) & 0x01;
-[e = *U + &U _Dbit * -> -> -> 7 `i `ui `ux -> -> # *U &U _Dbit `ui `ux -> & >> -> _num `i -> 7 `i -> 1 `i `uc ]
+[; ;TY1410_TX.c: 349:   Dbit[0] = (num >> 0) & 0x01;
+[e = *U + &U _Dbit * -> -> -> 0 `i `ui `ux -> -> # *U &U _Dbit `ui `ux -> & >> -> _num `i -> 0 `i -> 1 `i `uc ]
 "350
-[; ;TY1410_TX.c: 350:   wait_for_pwm_cycle_complete();
-[e ( _wait_for_pwm_cycle_complete ..  ]
+[; ;TY1410_TX.c: 350:   Dbit[1] = (num >> 1) & 0x01;
+[e = *U + &U _Dbit * -> -> -> 1 `i `ui `ux -> -> # *U &U _Dbit `ui `ux -> & >> -> _num `i -> 1 `i -> 1 `i `uc ]
 "351
-[; ;TY1410_TX.c: 351:   CCPR3L = 55;
-[e = _CCPR3L -> -> 55 `i `uc ]
+[; ;TY1410_TX.c: 351:   Dbit[2] = (num >> 2) & 0x01;
+[e = *U + &U _Dbit * -> -> -> 2 `i `ui `ux -> -> # *U &U _Dbit `ui `ux -> & >> -> _num `i -> 2 `i -> 1 `i `uc ]
+"352
+[; ;TY1410_TX.c: 352:   Dbit[3] = (num >> 3) & 0x01;
+[e = *U + &U _Dbit * -> -> -> 3 `i `ui `ux -> -> # *U &U _Dbit `ui `ux -> & >> -> _num `i -> 3 `i -> 1 `i `uc ]
 "353
-[; ;TY1410_TX.c: 353:   for (uint8_t i = 0; i < 8; i++) {
+[; ;TY1410_TX.c: 353:   Dbit[4] = (num >> 4) & 0x01;
+[e = *U + &U _Dbit * -> -> -> 4 `i `ui `ux -> -> # *U &U _Dbit `ui `ux -> & >> -> _num `i -> 4 `i -> 1 `i `uc ]
+"354
+[; ;TY1410_TX.c: 354:   Dbit[5] = (num >> 5) & 0x01;
+[e = *U + &U _Dbit * -> -> -> 5 `i `ui `ux -> -> # *U &U _Dbit `ui `ux -> & >> -> _num `i -> 5 `i -> 1 `i `uc ]
+"355
+[; ;TY1410_TX.c: 355:   Dbit[6] = (num >> 6) & 0x01;
+[e = *U + &U _Dbit * -> -> -> 6 `i `ui `ux -> -> # *U &U _Dbit `ui `ux -> & >> -> _num `i -> 6 `i -> 1 `i `uc ]
+"356
+[; ;TY1410_TX.c: 356:   Dbit[7] = (num >> 7) & 0x01;
+[e = *U + &U _Dbit * -> -> -> 7 `i `ui `ux -> -> # *U &U _Dbit `ui `ux -> & >> -> _num `i -> 7 `i -> 1 `i `uc ]
+"357
+[; ;TY1410_TX.c: 357:   wait_for_pwm_cycle_complete();
+[e ( _wait_for_pwm_cycle_complete ..  ]
+"358
+[; ;TY1410_TX.c: 358:   CCPR3L = 55;
+[e = _CCPR3L -> -> 55 `i `uc ]
+"360
+[; ;TY1410_TX.c: 360:   for (uint8_t i = 0; i < 8; i++) {
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
@@ -874,41 +874,41 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 368  ]
 [e :U 367 ]
 {
-"354
-[; ;TY1410_TX.c: 354:     if (Dbit[i] == 1) {
+"361
+[; ;TY1410_TX.c: 361:     if (Dbit[i] == 1) {
 [e $ ! == -> *U + &U _Dbit * -> _i `ux -> -> # *U &U _Dbit `ui `ux `i -> 1 `i 370  ]
 {
-"355
-[; ;TY1410_TX.c: 355:       Dbit[i] = 30;
+"362
+[; ;TY1410_TX.c: 362:       Dbit[i] = 30;
 [e = *U + &U _Dbit * -> _i `ux -> -> # *U &U _Dbit `ui `ux -> -> 30 `i `uc ]
-"356
-[; ;TY1410_TX.c: 356:     } else {
+"363
+[; ;TY1410_TX.c: 363:     } else {
 }
 [e $U 371  ]
 [e :U 370 ]
 {
-"357
-[; ;TY1410_TX.c: 357:       Dbit[i] = 55;
+"364
+[; ;TY1410_TX.c: 364:       Dbit[i] = 55;
 [e = *U + &U _Dbit * -> _i `ux -> -> # *U &U _Dbit `ui `ux -> -> 55 `i `uc ]
-"358
-[; ;TY1410_TX.c: 358:     }
+"365
+[; ;TY1410_TX.c: 365:     }
 }
 [e :U 371 ]
-"359
-[; ;TY1410_TX.c: 359:     wait_for_pwm_cycle_complete();
+"366
+[; ;TY1410_TX.c: 366:     wait_for_pwm_cycle_complete();
 [e ( _wait_for_pwm_cycle_complete ..  ]
-"360
-[; ;TY1410_TX.c: 360:     CCPR3L = Dbit[i];
+"367
+[; ;TY1410_TX.c: 367:     CCPR3L = Dbit[i];
 [e = _CCPR3L *U + &U _Dbit * -> _i `ux -> -> # *U &U _Dbit `ui `ux ]
-"361
-[; ;TY1410_TX.c: 361:   }
+"368
+[; ;TY1410_TX.c: 368:   }
 }
 [e ++ _i -> -> 1 `i `uc ]
 [e $ < -> _i `i -> 8 `i 367  ]
 [e :U 368 ]
 }
-"363
-[; ;TY1410_TX.c: 363:   for (uint8_t i = 0; i < 8; i++) {
+"370
+[; ;TY1410_TX.c: 370:   for (uint8_t i = 0; i < 8; i++) {
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
@@ -916,430 +916,425 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 373  ]
 [e :U 372 ]
 {
-"364
-[; ;TY1410_TX.c: 364:     wait_for_pwm_cycle_complete();
+"371
+[; ;TY1410_TX.c: 371:     wait_for_pwm_cycle_complete();
 [e ( _wait_for_pwm_cycle_complete ..  ]
-"365
-[; ;TY1410_TX.c: 365:     CCPR3L = 30;
+"372
+[; ;TY1410_TX.c: 372:     CCPR3L = 30;
 [e = _CCPR3L -> -> 30 `i `uc ]
-"366
-[; ;TY1410_TX.c: 366:   }
+"373
+[; ;TY1410_TX.c: 373:   }
 }
 [e ++ _i -> -> 1 `i `uc ]
 [e $ < -> _i `i -> 8 `i 372  ]
 [e :U 373 ]
 }
-"367
-[; ;TY1410_TX.c: 367: }
+"374
+[; ;TY1410_TX.c: 374: }
 [e :UE 366 ]
 }
-"369
-[; ;TY1410_TX.c: 369: void Hardware_Init(void) {
+"376
+[; ;TY1410_TX.c: 376: void Hardware_Init(void) {
 [v _Hardware_Init `(v ~T0 @X0 1 ef ]
 {
 [e :U _Hardware_Init ]
 [f ]
-"370
-[; ;TY1410_TX.c: 370:   OSCCON = 0b11110000;
-[e = _OSCCON -> -> 240 `i `uc ]
-"372
-[; ;TY1410_TX.c: 372:   OSCTUNE = 0b00111111;
-[e = _OSCTUNE -> -> 63 `i `uc ]
-"373
-[; ;TY1410_TX.c: 373:   ANSELA = 0b00000000;
-[e = _ANSELA -> -> 0 `i `uc ]
-"374
-[; ;TY1410_TX.c: 374:   PORTA = 0;
-[e = _PORTA -> -> 0 `i `uc ]
-"375
-[; ;TY1410_TX.c: 375:   TRISA = 0b00011111;
-[e = _TRISA -> -> 31 `i `uc ]
-"376
-[; ;TY1410_TX.c: 376:   LATA = 0b00000000;
-[e = _LATA -> -> 0 `i `uc ]
 "377
-[; ;TY1410_TX.c: 377:   ANSELB = 0b00000000;
-[e = _ANSELB -> -> 0 `i `uc ]
-"378
-[; ;TY1410_TX.c: 378:   PORTB = 0;
-[e = _PORTB -> -> 0 `i `uc ]
+[; ;TY1410_TX.c: 377:   OSCCON = 0b11110000;
+[e = _OSCCON -> -> 240 `i `uc ]
 "379
-[; ;TY1410_TX.c: 379:   TRISB = 0b00000000;
-[e = _TRISB -> -> 0 `i `uc ]
+[; ;TY1410_TX.c: 379:   OSCTUNE = 0b00111111;
+[e = _OSCTUNE -> -> 63 `i `uc ]
 "380
-[; ;TY1410_TX.c: 380:   LATB = 0b00000000;
-[e = _LATB -> -> 0 `i `uc ]
+[; ;TY1410_TX.c: 380:   ANSELA = 0b00000000;
+[e = _ANSELA -> -> 0 `i `uc ]
 "381
-[; ;TY1410_TX.c: 381:   PORTC = 0;
-[e = _PORTC -> -> 0 `i `uc ]
+[; ;TY1410_TX.c: 381:   PORTA = 0;
+[e = _PORTA -> -> 0 `i `uc ]
 "382
-[; ;TY1410_TX.c: 382:   TRISC = 0b10001010;
-[e = _TRISC -> -> 138 `i `uc ]
+[; ;TY1410_TX.c: 382:   TRISA = 0b00011111;
+[e = _TRISA -> -> 31 `i `uc ]
 "383
-[; ;TY1410_TX.c: 383:   LATC = 0b00000000;
-[e = _LATC -> -> 0 `i `uc ]
+[; ;TY1410_TX.c: 383:   LATA = 0b00000000;
+[e = _LATA -> -> 0 `i `uc ]
 "384
-[; ;TY1410_TX.c: 384:   PORTE = 0;
-[e = _PORTE -> -> 0 `i `uc ]
+[; ;TY1410_TX.c: 384:   ANSELB = 0b00000000;
+[e = _ANSELB -> -> 0 `i `uc ]
 "385
-[; ;TY1410_TX.c: 385:   TRISE = 0b00000000;
-[e = _TRISE -> -> 0 `i `uc ]
+[; ;TY1410_TX.c: 385:   PORTB = 0;
+[e = _PORTB -> -> 0 `i `uc ]
 "386
-[; ;TY1410_TX.c: 386:   LATE = 0b00000000;
-[e = _LATE -> -> 0 `i `uc ]
+[; ;TY1410_TX.c: 386:   TRISB = 0b00000000;
+[e = _TRISB -> -> 0 `i `uc ]
 "387
-[; ;TY1410_TX.c: 387:   _delay((unsigned long)((100)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+[; ;TY1410_TX.c: 387:   LATB = 0b00000000;
+[e = _LATB -> -> 0 `i `uc ]
 "388
-[; ;TY1410_TX.c: 388:   CCP3CON = 0b00001100;
-[e = _CCP3CON -> -> 12 `i `uc ]
+[; ;TY1410_TX.c: 388:   PORTC = 0;
+[e = _PORTC -> -> 0 `i `uc ]
 "389
-[; ;TY1410_TX.c: 389:   CCP3SEL = 0;
-[e = _CCP3SEL -> -> 0 `i `b ]
+[; ;TY1410_TX.c: 389:   TRISC = 0b10001010;
+[e = _TRISC -> -> 138 `i `uc ]
 "390
-[; ;TY1410_TX.c: 390:   PR2 = 103;
-[e = _PR2 -> -> 103 `i `uc ]
+[; ;TY1410_TX.c: 390:   LATC = 0b00000000;
+[e = _LATC -> -> 0 `i `uc ]
 "391
-[; ;TY1410_TX.c: 391:   CCPR3L = 30;
-[e = _CCPR3L -> -> 30 `i `uc ]
+[; ;TY1410_TX.c: 391:   PORTE = 0;
+[e = _PORTE -> -> 0 `i `uc ]
 "392
-[; ;TY1410_TX.c: 392:   TMR2ON = 1;
-[e = _TMR2ON -> -> 1 `i `b ]
+[; ;TY1410_TX.c: 392:   TRISE = 0b00000000;
+[e = _TRISE -> -> 0 `i `uc ]
 "393
-[; ;TY1410_TX.c: 393:   T2CKPS1 = 0;
-[e = _T2CKPS1 -> -> 0 `i `b ]
+[; ;TY1410_TX.c: 393:   LATE = 0b00000000;
+[e = _LATE -> -> 0 `i `uc ]
 "394
-[; ;TY1410_TX.c: 394:   T2CKPS0 = 1;
-[e = _T2CKPS0 -> -> 1 `i `b ]
+[; ;TY1410_TX.c: 394:   _delay((unsigned long)((100)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
 "395
-[; ;TY1410_TX.c: 395: }
+[; ;TY1410_TX.c: 395:   CCP3CON = 0b00001100;
+[e = _CCP3CON -> -> 12 `i `uc ]
+"396
+[; ;TY1410_TX.c: 396:   CCP3SEL = 0;
+[e = _CCP3SEL -> -> 0 `i `b ]
+"397
+[; ;TY1410_TX.c: 397:   PR2 = 103;
+[e = _PR2 -> -> 103 `i `uc ]
+"398
+[; ;TY1410_TX.c: 398:   CCPR3L = 30;
+[e = _CCPR3L -> -> 30 `i `uc ]
+"399
+[; ;TY1410_TX.c: 399:   TMR2ON = 1;
+[e = _TMR2ON -> -> 1 `i `b ]
+"400
+[; ;TY1410_TX.c: 400:   T2CKPS1 = 0;
+[e = _T2CKPS1 -> -> 0 `i `b ]
+"401
+[; ;TY1410_TX.c: 401:   T2CKPS0 = 1;
+[e = _T2CKPS0 -> -> 1 `i `b ]
+"402
+[; ;TY1410_TX.c: 402: }
 [e :UE 375 ]
 }
-"397
-[; ;TY1410_TX.c: 397: void Check_Input(void) {
+"404
+[; ;TY1410_TX.c: 404: void Check_Input(void) {
 [v _Check_Input `(v ~T0 @X0 1 ef ]
 {
 [e :U _Check_Input ]
 [f ]
-"399
-[; ;TY1410_TX.c: 399:   D2.Byte = 0;
+"406
+[; ;TY1410_TX.c: 406:   D2.Byte = 0;
 [e = . _D2 1 -> -> 0 `i `uc ]
-"400
-[; ;TY1410_TX.c: 400:   D3.Byte = 0;
+"407
+[; ;TY1410_TX.c: 407:   D3.Byte = 0;
 [e = . _D3 1 -> -> 0 `i `uc ]
-"401
-[; ;TY1410_TX.c: 401:   csFlag.Byte = 0;
+"408
+[; ;TY1410_TX.c: 408:   csFlag.Byte = 0;
 [e = . _csFlag 1 -> -> 0 `i `uc ]
-"404
-[; ;TY1410_TX.c: 404:   if (PORTAbits.RA0 == 0) {
+"411
+[; ;TY1410_TX.c: 411:   if (PORTAbits.RA0 == 0) {
 [e $ ! == -> . . _PORTAbits 0 0 `i -> 0 `i 377  ]
 {
-"405
-[; ;TY1410_TX.c: 405:     PORTBbits.RB5 = 1;
+"412
+[; ;TY1410_TX.c: 412:     PORTBbits.RB5 = 1;
 [e = . . _PORTBbits 0 5 -> -> 1 `i `uc ]
-"406
-[; ;TY1410_TX.c: 406:     D2.RunLight = 1;
+"413
+[; ;TY1410_TX.c: 413:     D2.RunLight = 1;
 [e = . . _D2 0 2 -> -> 1 `i `a ]
-"407
-[; ;TY1410_TX.c: 407:     csFlag.RunLight = 1;
+"414
+[; ;TY1410_TX.c: 414:     csFlag.RunLight = 1;
 [e = . . _csFlag 0 5 -> -> 1 `i `a ]
-"408
-[; ;TY1410_TX.c: 408:   } else {
+"415
+[; ;TY1410_TX.c: 415:   } else {
 }
 [e $U 378  ]
 [e :U 377 ]
 {
-"409
-[; ;TY1410_TX.c: 409:     PORTBbits.RB5 = 0;
+"416
+[; ;TY1410_TX.c: 416:     PORTBbits.RB5 = 0;
 [e = . . _PORTBbits 0 5 -> -> 0 `i `uc ]
-"410
-[; ;TY1410_TX.c: 410:     D2.RunLight = 0;
+"417
+[; ;TY1410_TX.c: 417:     D2.RunLight = 0;
 [e = . . _D2 0 2 -> -> 0 `i `a ]
-"411
-[; ;TY1410_TX.c: 411:     csFlag.RunLight = 0;
+"418
+[; ;TY1410_TX.c: 418:     csFlag.RunLight = 0;
 [e = . . _csFlag 0 5 -> -> 0 `i `a ]
-"412
-[; ;TY1410_TX.c: 412:   }
+"419
+[; ;TY1410_TX.c: 419:   }
 }
 [e :U 378 ]
-"415
-[; ;TY1410_TX.c: 415:   if (PORTAbits.RA1 == 0) {
+"422
+[; ;TY1410_TX.c: 422:   if (PORTAbits.RA1 == 0) {
 [e $ ! == -> . . _PORTAbits 0 1 `i -> 0 `i 379  ]
 {
-"416
-[; ;TY1410_TX.c: 416:     PORTBbits.RB4 = 1;
+"423
+[; ;TY1410_TX.c: 423:     PORTBbits.RB4 = 1;
 [e = . . _PORTBbits 0 4 -> -> 1 `i `uc ]
-"417
-[; ;TY1410_TX.c: 417:     D2.DRL = 1;
+"424
+[; ;TY1410_TX.c: 424:     D2.DRL = 1;
 [e = . . _D2 0 3 -> -> 1 `i `a ]
-"418
-[; ;TY1410_TX.c: 418:     csFlag.DRL = 1;
+"425
+[; ;TY1410_TX.c: 425:     csFlag.DRL = 1;
 [e = . . _csFlag 0 4 -> -> 1 `i `a ]
-"419
-[; ;TY1410_TX.c: 419:   } else {
+"426
+[; ;TY1410_TX.c: 426:   } else {
 }
 [e $U 380  ]
 [e :U 379 ]
 {
-"420
-[; ;TY1410_TX.c: 420:     PORTBbits.RB4 = 0;
+"427
+[; ;TY1410_TX.c: 427:     PORTBbits.RB4 = 0;
 [e = . . _PORTBbits 0 4 -> -> 0 `i `uc ]
-"421
-[; ;TY1410_TX.c: 421:     D2.DRL = 0;
+"428
+[; ;TY1410_TX.c: 428:     D2.DRL = 0;
 [e = . . _D2 0 3 -> -> 0 `i `a ]
-"422
-[; ;TY1410_TX.c: 422:     csFlag.DRL = 0;
+"429
+[; ;TY1410_TX.c: 429:     csFlag.DRL = 0;
 [e = . . _csFlag 0 4 -> -> 0 `i `a ]
-"423
-[; ;TY1410_TX.c: 423:   }
+"430
+[; ;TY1410_TX.c: 430:   }
 }
 [e :U 380 ]
-"426
-[; ;TY1410_TX.c: 426:   if (PORTAbits.RA2 == 0) {
+"433
+[; ;TY1410_TX.c: 433:   if (PORTAbits.RA2 == 0) {
 [e $ ! == -> . . _PORTAbits 0 2 `i -> 0 `i 381  ]
 {
-"427
-[; ;TY1410_TX.c: 427:     PORTBbits.RB3 = 1;
+"434
+[; ;TY1410_TX.c: 434:     PORTBbits.RB3 = 1;
 [e = . . _PORTBbits 0 3 -> -> 1 `i `uc ]
-"428
-[; ;TY1410_TX.c: 428:     D2.LoBeam = 1;
+"435
+[; ;TY1410_TX.c: 435:     D2.LoBeam = 1;
 [e = . . _D2 0 4 -> -> 1 `i `a ]
-"429
-[; ;TY1410_TX.c: 429:     csFlag.LoBeam = 1;
+"436
+[; ;TY1410_TX.c: 436:     csFlag.LoBeam = 1;
 [e = . . _csFlag 0 3 -> -> 1 `i `a ]
-"430
-[; ;TY1410_TX.c: 430:   } else {
+"437
+[; ;TY1410_TX.c: 437:   } else {
 }
 [e $U 382  ]
 [e :U 381 ]
 {
-"431
-[; ;TY1410_TX.c: 431:     PORTBbits.RB3 = 0;
+"438
+[; ;TY1410_TX.c: 438:     PORTBbits.RB3 = 0;
 [e = . . _PORTBbits 0 3 -> -> 0 `i `uc ]
-"432
-[; ;TY1410_TX.c: 432:     D2.LoBeam = 0;
+"439
+[; ;TY1410_TX.c: 439:     D2.LoBeam = 0;
 [e = . . _D2 0 4 -> -> 0 `i `a ]
-"433
-[; ;TY1410_TX.c: 433:     csFlag.LoBeam = 0;
+"440
+[; ;TY1410_TX.c: 440:     csFlag.LoBeam = 0;
 [e = . . _csFlag 0 3 -> -> 0 `i `a ]
-"434
-[; ;TY1410_TX.c: 434:   }
+"441
+[; ;TY1410_TX.c: 441:   }
 }
 [e :U 382 ]
-"437
-[; ;TY1410_TX.c: 437:   if (PORTAbits.RA3 == 0) {
+"444
+[; ;TY1410_TX.c: 444:   if (PORTAbits.RA3 == 0) {
 [e $ ! == -> . . _PORTAbits 0 3 `i -> 0 `i 383  ]
 {
-"438
-[; ;TY1410_TX.c: 438:     PORTBbits.RB2 = 1;
+"445
+[; ;TY1410_TX.c: 445:     PORTBbits.RB2 = 1;
 [e = . . _PORTBbits 0 2 -> -> 1 `i `uc ]
-"439
-[; ;TY1410_TX.c: 439:     D2.HiBeam = 1;
+"446
+[; ;TY1410_TX.c: 446:     D2.HiBeam = 1;
 [e = . . _D2 0 5 -> -> 1 `i `a ]
-"440
-[; ;TY1410_TX.c: 440:     csFlag.HiBeam = 1;
+"447
+[; ;TY1410_TX.c: 447:     csFlag.HiBeam = 1;
 [e = . . _csFlag 0 2 -> -> 1 `i `a ]
-"441
-[; ;TY1410_TX.c: 441:   } else {
+"448
+[; ;TY1410_TX.c: 448:   } else {
 }
 [e $U 384  ]
 [e :U 383 ]
 {
-"442
-[; ;TY1410_TX.c: 442:     PORTBbits.RB2 = 0;
+"449
+[; ;TY1410_TX.c: 449:     PORTBbits.RB2 = 0;
 [e = . . _PORTBbits 0 2 -> -> 0 `i `uc ]
-"443
-[; ;TY1410_TX.c: 443:     D2.HiBeam = 0;
+"450
+[; ;TY1410_TX.c: 450:     D2.HiBeam = 0;
 [e = . . _D2 0 5 -> -> 0 `i `a ]
-"444
-[; ;TY1410_TX.c: 444:     csFlag.HiBeam = 0;
+"451
+[; ;TY1410_TX.c: 451:     csFlag.HiBeam = 0;
 [e = . . _csFlag 0 2 -> -> 0 `i `a ]
-"445
-[; ;TY1410_TX.c: 445:   }
+"452
+[; ;TY1410_TX.c: 452:   }
 }
 [e :U 384 ]
-"469
-[; ;TY1410_TX.c: 469:   if (PORTCbits.RC3 == 0) {
-[e $ ! == -> . . _PORTCbits 0 3 `i -> 0 `i 385  ]
-{
-"470
-[; ;TY1410_TX.c: 470:     PORTBbits.RB0 = 1;
-[e = . . _PORTBbits 0 0 -> -> 1 `i `uc ]
-"471
-[; ;TY1410_TX.c: 471:     D2.Byte = 6;
-[e = . _D2 1 -> -> 6 `i `uc ]
-"472
-[; ;TY1410_TX.c: 472:     D3.Byte = 0;
-[e = . _D3 1 -> -> 0 `i `uc ]
-"473
-[; ;TY1410_TX.c: 473:     fException = 1;
-[e = _fException -> -> 1 `i `a ]
-"474
-[; ;TY1410_TX.c: 474:   } else {
-}
-[e $U 386  ]
-[e :U 385 ]
-{
-"475
-[; ;TY1410_TX.c: 475:     PORTBbits.RB0 = 0;
-[e = . . _PORTBbits 0 0 -> -> 0 `i `uc ]
-"476
-[; ;TY1410_TX.c: 476:     fException = 0;
-[e = _fException -> -> 0 `i `a ]
 "477
-[; ;TY1410_TX.c: 477:   }
-}
-[e :U 386 ]
-"479
-[; ;TY1410_TX.c: 479:   if (PORTAbits.RA4 == 0) {
-[e $ ! == -> . . _PORTAbits 0 4 `i -> 0 `i 387  ]
+[; ;TY1410_TX.c: 477:   if ((PORTAbits.RA4 == 0) && (PORTAbits.RA2 == 1) && (PORTAbits.RA3 == 1)) {
+[e $ ! && && == -> . . _PORTAbits 0 4 `i -> 0 `i == -> . . _PORTAbits 0 2 `i -> 1 `i == -> . . _PORTAbits 0 3 `i -> 1 `i 385  ]
 {
+"478
+[; ;TY1410_TX.c: 478:     PORTBbits.RB3 = 1;
+[e = . . _PORTBbits 0 3 -> -> 1 `i `uc ]
+"479
+[; ;TY1410_TX.c: 479:     PORTBbits.RB2 = 1;
+[e = . . _PORTBbits 0 2 -> -> 1 `i `uc ]
 "480
-[; ;TY1410_TX.c: 480:     PORTBbits.RB1 = 1;
-[e = . . _PORTBbits 0 1 -> -> 1 `i `uc ]
+[; ;TY1410_TX.c: 480:     D2.LoBeam = 1;
+[e = . . _D2 0 4 -> -> 1 `i `a ]
 "481
-[; ;TY1410_TX.c: 481:     D2.Byte = 0;
-[e = . _D2 1 -> -> 0 `i `uc ]
+[; ;TY1410_TX.c: 481:     D2.HiBeam = 1;
+[e = . . _D2 0 5 -> -> 1 `i `a ]
 "482
-[; ;TY1410_TX.c: 482:     D3.Byte = 0;
-[e = . _D3 1 -> -> 0 `i `uc ]
+[; ;TY1410_TX.c: 482:     csFlag.HiBeam = 1;
+[e = . . _csFlag 0 2 -> -> 1 `i `a ]
 "483
-[; ;TY1410_TX.c: 483:     fException = 1;
-[e = _fException -> -> 1 `i `a ]
+[; ;TY1410_TX.c: 483:     csFlag.LoBeam = 1;
+[e = . . _csFlag 0 3 -> -> 1 `i `a ]
 "484
 [; ;TY1410_TX.c: 484:   }
 }
-[e $U 388  ]
-"485
-[; ;TY1410_TX.c: 485:   else{
-[e :U 387 ]
+[e :U 385 ]
+"495
+[; ;TY1410_TX.c: 495:   if (PORTCbits.RC3 == 0) {
+[e $ ! == -> . . _PORTCbits 0 3 `i -> 0 `i 386  ]
 {
-"486
-[; ;TY1410_TX.c: 486:     PORTBbits.RB1 = 0;
-[e = . . _PORTBbits 0 1 -> -> 0 `i `uc ]
-"487
-[; ;TY1410_TX.c: 487:   }
+"496
+[; ;TY1410_TX.c: 496:     PORTBbits.RB0 = 1;
+[e = . . _PORTBbits 0 0 -> -> 1 `i `uc ]
+"497
+[; ;TY1410_TX.c: 497:     D2.Byte = 6;
+[e = . _D2 1 -> -> 6 `i `uc ]
+"498
+[; ;TY1410_TX.c: 498:     D3.Byte = 0;
+[e = . _D3 1 -> -> 0 `i `uc ]
+"499
+[; ;TY1410_TX.c: 499:     fException = 1;
+[e = _fException -> -> 1 `i `a ]
+"500
+[; ;TY1410_TX.c: 500:   } else {
 }
-[e :U 388 ]
-"488
-[; ;TY1410_TX.c: 488: }
+[e $U 387  ]
+[e :U 386 ]
+{
+"501
+[; ;TY1410_TX.c: 501:     PORTBbits.RB0 = 0;
+[e = . . _PORTBbits 0 0 -> -> 0 `i `uc ]
+"502
+[; ;TY1410_TX.c: 502:     fException = 0;
+[e = _fException -> -> 0 `i `a ]
+"503
+[; ;TY1410_TX.c: 503:   }
+}
+[e :U 387 ]
+"513
+[; ;TY1410_TX.c: 513: }
 [e :UE 376 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"492
-[; ;TY1410_TX.c: 492: int main(void) {
+"517
+[; ;TY1410_TX.c: 517: int main(void) {
 [v _main `(i ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"493
-[; ;TY1410_TX.c: 493:   Hardware_Init();
-[e ( _Hardware_Init ..  ]
-"494
-[; ;TY1410_TX.c: 494:   while (1) {
-[e :U 391 ]
-{
-"495
-[; ;TY1410_TX.c: 495:     Check_Input();
-[e ( _Check_Input ..  ]
-"498
-[; ;TY1410_TX.c: 498:     tx_Data[0] = 0xC8;
-[e = *U + &U _tx_Data * -> -> -> 0 `i `ui `ux -> -> # *U &U _tx_Data `ui `ux -> -> 200 `i `uc ]
-"499
-[; ;TY1410_TX.c: 499:     tx_Data[1] = 0x8B;
-[e = *U + &U _tx_Data * -> -> -> 1 `i `ui `ux -> -> # *U &U _tx_Data `ui `ux -> -> 139 `i `uc ]
-"500
-[; ;TY1410_TX.c: 500:     tx_Data[2] = 0x00;
-[e = *U + &U _tx_Data * -> -> -> 2 `i `ui `ux -> -> # *U &U _tx_Data `ui `ux -> -> 0 `i `uc ]
-"502
-[; ;TY1410_TX.c: 502:     tx_Data[3] = 0x00;
-[e = *U + &U _tx_Data * -> -> -> 3 `i `ui `ux -> -> # *U &U _tx_Data `ui `ux -> -> 0 `i `uc ]
-"504
-[; ;TY1410_TX.c: 504:     tx_Data[4] = 0x00;
-[e = *U + &U _tx_Data * -> -> -> 4 `i `ui `ux -> -> # *U &U _tx_Data `ui `ux -> -> 0 `i `uc ]
-"505
-[; ;TY1410_TX.c: 505:     tx_Data[5] = 0x00;
-[e = *U + &U _tx_Data * -> -> -> 5 `i `ui `ux -> -> # *U &U _tx_Data `ui `ux -> -> 0 `i `uc ]
-"506
-[; ;TY1410_TX.c: 506:     tx_Data[6] = 0x00;
-[e = *U + &U _tx_Data * -> -> -> 6 `i `ui `ux -> -> # *U &U _tx_Data `ui `ux -> -> 0 `i `uc ]
-"507
-[; ;TY1410_TX.c: 507:     tx_Data[7] = 0x00;
-[e = *U + &U _tx_Data * -> -> -> 7 `i `ui `ux -> -> # *U &U _tx_Data `ui `ux -> -> 0 `i `uc ]
-"508
-[; ;TY1410_TX.c: 508:     tx_Data[8] = 0x00;
-[e = *U + &U _tx_Data * -> -> -> 8 `i `ui `ux -> -> # *U &U _tx_Data `ui `ux -> -> 0 `i `uc ]
-"509
-[; ;TY1410_TX.c: 509:     tx_Data[9] = 0x00;
-[e = *U + &U _tx_Data * -> -> -> 9 `i `ui `ux -> -> # *U &U _tx_Data `ui `ux -> -> 0 `i `uc ]
-"510
-[; ;TY1410_TX.c: 510:     tx_Data[10] = 0x04C;
-[e = *U + &U _tx_Data * -> -> -> 10 `i `ui `ux -> -> # *U &U _tx_Data `ui `ux -> -> 76 `i `uc ]
-"512
-[; ;TY1410_TX.c: 512:     tx_Data[2] = D2.Byte;
-[e = *U + &U _tx_Data * -> -> -> 2 `i `ui `ux -> -> # *U &U _tx_Data `ui `ux . _D2 1 ]
-"513
-[; ;TY1410_TX.c: 513:     tx_Data[3] = D3.Byte;
-[e = *U + &U _tx_Data * -> -> -> 3 `i `ui `ux -> -> # *U &U _tx_Data `ui `ux . _D3 1 ]
-"515
-[; ;TY1410_TX.c: 515:     if (fException == 1) {
-[e $ ! == -> _fException `i -> 1 `i 393  ]
-{
-"516
-[; ;TY1410_TX.c: 516:       fException = 0;
-[e = _fException -> -> 0 `i `a ]
-"517
-[; ;TY1410_TX.c: 517:       tx_Data[10] = 0xD5;
-[e = *U + &U _tx_Data * -> -> -> 10 `i `ui `ux -> -> # *U &U _tx_Data `ui `ux -> -> 213 `i `uc ]
 "518
-[; ;TY1410_TX.c: 518:     } else {
-}
-[e $U 394  ]
-[e :U 393 ]
-{
+[; ;TY1410_TX.c: 518:   Hardware_Init();
+[e ( _Hardware_Init ..  ]
 "519
-[; ;TY1410_TX.c: 519:       tx_Data[10] = CS[csFlag.Byte];
-[e = *U + &U _tx_Data * -> -> -> 10 `i `ui `ux -> -> # *U &U _tx_Data `ui `ux *U + &U _CS * -> . _csFlag 1 `ux -> -> # *U &U _CS `ui `ux ]
+[; ;TY1410_TX.c: 519:   while (1) {
+[e :U 390 ]
+{
 "520
-[; ;TY1410_TX.c: 520:     }
+[; ;TY1410_TX.c: 520:     Check_Input();
+[e ( _Check_Input ..  ]
+"523
+[; ;TY1410_TX.c: 523:     tx_Data[0] = 0xC8;
+[e = *U + &U _tx_Data * -> -> -> 0 `i `ui `ux -> -> # *U &U _tx_Data `ui `ux -> -> 200 `i `uc ]
+"524
+[; ;TY1410_TX.c: 524:     tx_Data[1] = 0x8B;
+[e = *U + &U _tx_Data * -> -> -> 1 `i `ui `ux -> -> # *U &U _tx_Data `ui `ux -> -> 139 `i `uc ]
+"525
+[; ;TY1410_TX.c: 525:     tx_Data[2] = 0x00;
+[e = *U + &U _tx_Data * -> -> -> 2 `i `ui `ux -> -> # *U &U _tx_Data `ui `ux -> -> 0 `i `uc ]
+"527
+[; ;TY1410_TX.c: 527:     tx_Data[3] = 0x00;
+[e = *U + &U _tx_Data * -> -> -> 3 `i `ui `ux -> -> # *U &U _tx_Data `ui `ux -> -> 0 `i `uc ]
+"529
+[; ;TY1410_TX.c: 529:     tx_Data[4] = 0x00;
+[e = *U + &U _tx_Data * -> -> -> 4 `i `ui `ux -> -> # *U &U _tx_Data `ui `ux -> -> 0 `i `uc ]
+"530
+[; ;TY1410_TX.c: 530:     tx_Data[5] = 0x00;
+[e = *U + &U _tx_Data * -> -> -> 5 `i `ui `ux -> -> # *U &U _tx_Data `ui `ux -> -> 0 `i `uc ]
+"531
+[; ;TY1410_TX.c: 531:     tx_Data[6] = 0x00;
+[e = *U + &U _tx_Data * -> -> -> 6 `i `ui `ux -> -> # *U &U _tx_Data `ui `ux -> -> 0 `i `uc ]
+"532
+[; ;TY1410_TX.c: 532:     tx_Data[7] = 0x00;
+[e = *U + &U _tx_Data * -> -> -> 7 `i `ui `ux -> -> # *U &U _tx_Data `ui `ux -> -> 0 `i `uc ]
+"533
+[; ;TY1410_TX.c: 533:     tx_Data[8] = 0x00;
+[e = *U + &U _tx_Data * -> -> -> 8 `i `ui `ux -> -> # *U &U _tx_Data `ui `ux -> -> 0 `i `uc ]
+"534
+[; ;TY1410_TX.c: 534:     tx_Data[9] = 0x00;
+[e = *U + &U _tx_Data * -> -> -> 9 `i `ui `ux -> -> # *U &U _tx_Data `ui `ux -> -> 0 `i `uc ]
+"535
+[; ;TY1410_TX.c: 535:     tx_Data[10] = 0x04C;
+[e = *U + &U _tx_Data * -> -> -> 10 `i `ui `ux -> -> # *U &U _tx_Data `ui `ux -> -> 76 `i `uc ]
+"537
+[; ;TY1410_TX.c: 537:     tx_Data[2] = D2.Byte;
+[e = *U + &U _tx_Data * -> -> -> 2 `i `ui `ux -> -> # *U &U _tx_Data `ui `ux . _D2 1 ]
+"538
+[; ;TY1410_TX.c: 538:     tx_Data[3] = D3.Byte;
+[e = *U + &U _tx_Data * -> -> -> 3 `i `ui `ux -> -> # *U &U _tx_Data `ui `ux . _D3 1 ]
+"540
+[; ;TY1410_TX.c: 540:     if (fException == 1) {
+[e $ ! == -> _fException `i -> 1 `i 392  ]
+{
+"541
+[; ;TY1410_TX.c: 541:       fException = 0;
+[e = _fException -> -> 0 `i `a ]
+"542
+[; ;TY1410_TX.c: 542:       tx_Data[10] = 0xD5;
+[e = *U + &U _tx_Data * -> -> -> 10 `i `ui `ux -> -> # *U &U _tx_Data `ui `ux -> -> 213 `i `uc ]
+"543
+[; ;TY1410_TX.c: 543:     } else {
 }
-[e :U 394 ]
-"522
-[; ;TY1410_TX.c: 522:     for (uint8_t i = 0; i < 11; i++) {
+[e $U 393  ]
+[e :U 392 ]
+{
+"544
+[; ;TY1410_TX.c: 544:       tx_Data[10] = CS[csFlag.Byte];
+[e = *U + &U _tx_Data * -> -> -> 10 `i `ui `ux -> -> # *U &U _tx_Data `ui `ux *U + &U _CS * -> . _csFlag 1 `ux -> -> # *U &U _CS `ui `ux ]
+"545
+[; ;TY1410_TX.c: 545:     }
+}
+[e :U 393 ]
+"547
+[; ;TY1410_TX.c: 547:     for (uint8_t i = 0; i < 11; i++) {
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 11 `i 395  ]
-[e $U 396  ]
-[e :U 395 ]
+[e $ < -> _i `i -> 11 `i 394  ]
+[e $U 395  ]
+[e :U 394 ]
 {
-"523
-[; ;TY1410_TX.c: 523:       PWM(tx_Data[i]);
+"548
+[; ;TY1410_TX.c: 548:       PWM(tx_Data[i]);
 [e ( _PWM (1 *U + &U _tx_Data * -> _i `ux -> -> # *U &U _tx_Data `ui `ux ]
-"524
-[; ;TY1410_TX.c: 524:     }
+"549
+[; ;TY1410_TX.c: 549:     }
 }
 [e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 11 `i 395  ]
-[e :U 396 ]
+[e $ < -> _i `i -> 11 `i 394  ]
+[e :U 395 ]
 }
-"1186
-[; ;TY1410_TX.c: 1186:     CCPR3L = 30;
+"1211
+[; ;TY1410_TX.c: 1211:     CCPR3L = 30;
 [e = _CCPR3L -> -> 30 `i `uc ]
-"1187
-[; ;TY1410_TX.c: 1187:     _delay((unsigned long)((20)*(32000000/4000.0)));
+"1212
+[; ;TY1410_TX.c: 1212:     _delay((unsigned long)((20)*(32000000/4000.0)));
 [e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1188
-[; ;TY1410_TX.c: 1188:   }
+"1213
+[; ;TY1410_TX.c: 1213:   }
 }
-[e :U 390 ]
-[e $U 391  ]
-[e :U 392 ]
-"1189
-[; ;TY1410_TX.c: 1189:   return 0;
+[e :U 389 ]
+[e $U 390  ]
+[e :U 391 ]
+"1214
+[; ;TY1410_TX.c: 1214:   return 0;
 [e ) -> 0 `i ]
-[e $UE 389  ]
-"1190
-[; ;TY1410_TX.c: 1190: }
-[e :UE 389 ]
+[e $UE 388  ]
+"1215
+[; ;TY1410_TX.c: 1215: }
+[e :UE 388 ]
 }

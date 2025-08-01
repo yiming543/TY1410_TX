@@ -7,7 +7,7 @@
 # 1 "C:/Users/t00904/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "TY1410_TX.c" 2
-# 31 "TY1410_TX.c"
+# 37 "TY1410_TX.c"
 # 1 "C:/Users/t00904/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\\pic\\include\\proc\\pic16f1936.h" 1 3
 # 44 "C:/Users/t00904/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\\pic\\include\\proc\\pic16f1936.h" 3
 # 1 "C:/Users/t00904/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\\pic\\include\\__at.h" 1 3
@@ -4652,7 +4652,7 @@ extern volatile __bit nTO __attribute__((address(0x1C)));
 
 
 extern volatile __bit nWPUEN __attribute__((address(0x4AF)));
-# 31 "TY1410_TX.c" 2
+# 37 "TY1410_TX.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdint.h" 1 3
 
@@ -4759,7 +4759,7 @@ typedef int32_t int_fast32_t;
 typedef uint16_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
 # 149 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdint.h" 2 3
-# 32 "TY1410_TX.c" 2
+# 38 "TY1410_TX.c" 2
 
 # 1 "C:/Users/t00904/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Users/t00904/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\\pic\\include\\xc.h" 3
@@ -4924,7 +4924,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:/Users/t00904/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\\pic\\include\\xc.h" 2 3
-# 33 "TY1410_TX.c" 2
+# 39 "TY1410_TX.c" 2
 
 
 
@@ -4953,7 +4953,7 @@ extern __bank0 __bit __timeout;
 #pragma config PLLEN = ON
 #pragma config VCAPEN = OFF
 #pragma config WRT = OFF
-# 92 "TY1410_TX.c"
+# 98 "TY1410_TX.c"
 typedef union {
 
   struct {
@@ -5050,7 +5050,8 @@ static uint8_t CS[64] = {
     0x00,
     0x00,
 
-    0x12,
+
+    0xB1,
     0xA0,
     0x71,
     0x01,
@@ -5095,7 +5096,7 @@ static uint8_t CS[64] = {
     0x71,
     0xA2,
 };
-# 325 "TY1410_TX.c"
+# 332 "TY1410_TX.c"
 unsigned char data48[4] = {2, 0, 0, 180};
 unsigned char a = 0, b = 0;
 
@@ -5217,7 +5218,16 @@ void Check_Input(void) {
     D2.HiBeam = 0;
     csFlag.HiBeam = 0;
   }
-# 469 "TY1410_TX.c"
+# 477 "TY1410_TX.c"
+  if ((PORTAbits.RA4 == 0) && (PORTAbits.RA2 == 1) && (PORTAbits.RA3 == 1)) {
+    PORTBbits.RB3 = 1;
+    PORTBbits.RB2 = 1;
+    D2.LoBeam = 1;
+    D2.HiBeam = 1;
+    csFlag.HiBeam = 1;
+    csFlag.LoBeam = 1;
+  }
+# 495 "TY1410_TX.c"
   if (PORTCbits.RC3 == 0) {
     PORTBbits.RB0 = 1;
     D2.Byte = 6;
@@ -5227,16 +5237,7 @@ void Check_Input(void) {
     PORTBbits.RB0 = 0;
     fException = 0;
   }
-
-  if (PORTAbits.RA4 == 0) {
-    PORTBbits.RB1 = 1;
-    D2.Byte = 0;
-    D3.Byte = 0;
-    fException = 1;
-  }
-  else{
-    PORTBbits.RB1 = 0;
-  }
+# 513 "TY1410_TX.c"
 }
 
 
@@ -5274,7 +5275,7 @@ int main(void) {
     for (uint8_t i = 0; i < 11; i++) {
       PWM(tx_Data[i]);
     }
-# 1186 "TY1410_TX.c"
+# 1211 "TY1410_TX.c"
     CCPR3L = 30;
     _delay((unsigned long)((20)*(32000000/4000.0)));
   }

@@ -28,6 +28,12 @@
 // 左方改成CheckSum error
 // C8 8B 0 0 0 0 0 0 0 0 D5
 
+//20280801 1014_TX V02 CS:2556
+//左方改成行車特殊信號
+//C8 8B 6 0 0 0 0 0 0 0 D5
+//左方改成近遠燈(超車)同時送,搭配晝行測試(修正畫行+超車(近燈+遠燈)CheckSum)
+//C8 8B 38 0 0 0 0 0 0 0 B1
+
 #include <pic16f1936.h>
 #include <stdint.h>
 #include <xc.h>
@@ -185,7 +191,8 @@ static uint8_t CS[64] = {
     0x00, // 011010 晝行+近燈+左方
     0x00, // 011011 晝行+近燈+右方+左方(警示)
 
-    0x12, // 011100 畫行+遠燈+近燈(超車)
+    // 0x12, // 011100 畫行+遠燈+近燈(超車)
+    0xB1, // 011100 畫行+遠燈+近燈(超車)
     0xA0, // 011101 畫行+遠燈+近燈(超車)+右方
     0x71, // 011110 畫行+遠燈+近燈(超車)+左方
     0x01, // 011111 晝行+遠燈+近燈(超車)+右方+左方(警示)
@@ -465,6 +472,25 @@ void Check_Input(void) {
   //    D3.trunLight_R = 0;
   //    csFlag.turnLight_R = 0;
   //  }
+
+  // 晝行時打超車(遠燈+近燈+晝行)
+  if ((SW5 == OFF) && (SW3 == ON) && (SW4 == ON)) {
+    LED3 = ON;
+    LED4 = ON;
+    D2.LoBeam = 1;
+    D2.HiBeam = 1;
+    csFlag.HiBeam = 1;
+    csFlag.LoBeam = 1;
+  }
+  // } else if ((SW5 == ON) && (SW3 == ON) && (SW4 == ON)){
+  //   LED3 = OFF;
+  //   LED4 = OFF;
+  //   D2.LoBeam = 0;
+  //   D2.HiBeam = 0;
+  //   csFlag.HiBeam = 0;
+  //   csFlag.LoBeam = 0;
+  // }
+
   // 行車特殊信號
   if (SW6 == OFF) {
     LED6 = ON;
@@ -475,16 +501,15 @@ void Check_Input(void) {
     LED6 = OFF;
     fException = 0;
   }
-  
-  if (SW5 == OFF) {
-    LED5 = ON;
-    D2.Byte = 0;
-    D3.Byte = 0;
-    fException = 1;
-  }
-  else{
-    LED5 = OFF;
-  }
+
+  // if (SW5 == OFF) {
+  //   LED5 = ON;
+  //   D2.Byte = 0;
+  //   D3.Byte = 0;
+  //   fException = 1;
+  // } else {
+  //   LED5 = OFF;
+  // }
 }
 
 // #define debug 1
